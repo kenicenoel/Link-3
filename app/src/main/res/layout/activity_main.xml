@@ -5,13 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_blues"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="kenice.noel.link3.MainActivity">
 
     <GridLayout
+        android:id="@+id/gameBoardLayout"
         android:layout_width="match_parent"
         android:layout_height="360dp"
         android:background="@drawable/ic_gameboard"
@@ -19,126 +16,182 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
         android:rowCount="3">
 
 
         <ImageView
-            android:id="@+id/greenCoin"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:id="@+id/coin0"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_row="0"
             android:layout_column="0"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="40dp"
             android:onClick="dropIn"
+            android:tag="0"
             tools:src="@drawable/ic_nutmeg_coin_yellow" />
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:id="@+id/coin1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_row="0"
             android:layout_column="1"
             android:layout_marginTop="40dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="40dp"
             android:onClick="dropIn"
+            android:tag="1"
             tools:src="@drawable/ic_nutmeg_coin_yellow" />
 
         <ImageView
-            android:id="@+id/yellowCoin"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:id="@+id/coin2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_row="0"
             android:layout_column="2"
             android:layout_marginTop="40dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:onClick="dropIn"
+            android:tag="2"
             tools:src="@drawable/ic_nutmeg_coin_yellow" />
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:id="@+id/coin3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_row="1"
             android:layout_column="0"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginLeft="40dp"
             android:onClick="dropIn"
+            android:tag="3"
             tools:src="@drawable/ic_nutmeg_coin_yellow" />
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:id="@+id/coin4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_row="1"
             android:layout_column="1"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"
             android:onClick="dropIn"
-            tools:src="@drawable/ic_nutmeg_coin_yellow" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:layout_row="1"
-            android:layout_column="2"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
-            android:onClick="dropIn"
+            android:tag="4"
             tools:src="@drawable/ic_nutmeg_coin_yellow" />
 
 
-
         <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:id="@+id/coin6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_row="2"
             android:layout_column="0"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginLeft="40dp"
             android:onClick="dropIn"
+            android:tag="6"
             tools:src="@drawable/ic_nutmeg_coin_yellow" />
 
         <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:id="@+id/coin7"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_row="2"
             android:layout_column="1"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="40dp"
             android:onClick="dropIn"
+            android:tag="7"
             tools:src="@drawable/ic_nutmeg_coin_yellow" />
 
         <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:id="@+id/coin8"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_row="2"
             android:layout_column="2"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
             android:onClick="dropIn"
+            android:tag="8"
+            tools:src="@drawable/ic_nutmeg_coin_yellow" />
+
+        <ImageView
+            android:id="@+id/coin5"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:onClick="dropIn"
+            android:tag="5"
             tools:src="@drawable/ic_nutmeg_coin_yellow" />
 
     </GridLayout>
 
     <LinearLayout
+        android:id="@+id/gameOverLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="30dp"
+        android:orientation="vertical"
+        android:alpha="1"
+        android:visibility="gone"
+        android:background="@drawable/bg_rounded_corners_white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="25sp"
+            android:text="@string/round_over"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/winningPlayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            tools:text="Player 1 won the round"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="10dp"
+            />
+
+        <Button
+            android:id="@+id/buttonPlayAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play_again"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background_blue"
+            android:onClick="in"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scoreCountLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:padding="10dp"
+        android:background="#40000000"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:text="Wins: "/>
 
         <ImageView
             android:id="@+id/scoreImagePlayer1"
@@ -151,6 +204,7 @@
             android:text=""/>
 
         <TextView
+            android:id="@+id/scorePlayerOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
@@ -169,6 +223,7 @@
             android:text=""/>
 
         <TextView
+            android:id="@+id/scorePlayerTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"

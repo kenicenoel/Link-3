@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Link 3</string>
+    <string name="play_again">Play Again</string>
+    <string name="round_over">Round over</string>
 </resources>
